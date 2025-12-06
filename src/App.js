@@ -347,7 +347,7 @@ const CandidateRegistrationSystem = () => {
                 type="text"
                 value={loginForm.tenantName}
                 onChange={(e) => setLoginForm({...loginForm, tenantName: e.target.value})}
-                placeholder="acme"
+                placeholder="vrksatech"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               />
             </div>
@@ -386,7 +386,7 @@ const CandidateRegistrationSystem = () => {
 
           <div className="mt-6 p-4 bg-gray-50 rounded-lg">
             <p className="text-xs text-gray-600 font-semibold mb-2">Demo Credentials:</p>
-            <p className="text-xs text-gray-600">Tenant: <code className="bg-white px-2 py-1 rounded">acme</code></p>
+            <p className="text-xs text-gray-600">Tenant: <code className="bg-white px-2 py-1 rounded">vrksatech</code></p>
             <p className="text-xs text-gray-600">User: <code className="bg-white px-2 py-1 rounded">admin</code></p>
             <p className="text-xs text-gray-600">Pass: <code className="bg-white px-2 py-1 rounded">password123</code></p>
           </div>
