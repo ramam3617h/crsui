@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Bell, Users, FileText, CheckCircle, XCircle, AlertCircle, Plus, Search, Trash2, RefreshCw, LogOut, Shield, Activity, Eye, Lock, Download, Filter, Calendar, TrendingUp, Mail, Phone, Edit, Save, X } from 'lucide-react';
+import { Bell, Users, FileText, CheckCircle, XCircle, AlertCircle, Plus, Search, Trash2, RefreshCw, LogOut, ShieldCheck, Activity, Eye, Lock, Download, Filter, Calendar, TrendingUp, Mail, Phone, Edit, Save, X } from 'lucide-react';
 
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
@@ -327,10 +327,10 @@ const CandidateRegistrationSystem = () => {
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-4">
-              <Shield className="w-12 h-12 text-blue-600" />
+              <ShieldCheck className="w-12 h-12 text-blue-600" />
             </div>
-            <h1 className="text-3xl font-bold text-gray-900">Candidate System</h1>
-            <p className="text-gray-600 mt-2">Multi-Tenant Platform</p>
+            <h1 className="text-3xl font-bold text-gray-900">Candidate Interview System</h1>
+            <p className="text-gray-600 mt-2">Multi Project Platform</p>
           </div>
 
           {error && (
@@ -487,7 +487,7 @@ const CandidateRegistrationSystem = () => {
                     : 'border-transparent text-gray-500 hover:text-gray-700'
                 }`}
               >
-                <Shield className="w-4 h-4" />
+                <ShieldCheck className="w-4 h-4" />
                 Admin
               </button>
             )}
@@ -772,7 +772,7 @@ const CandidateRegistrationSystem = () => {
           <div>
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-gray-900 flex items-center gap-2">
-                <Shield className="w-6 h-6" />
+                <ShieldCheck className="w-6 h-6" />
                 Admin Panel
               </h2>
               <button
