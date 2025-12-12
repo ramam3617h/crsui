@@ -388,7 +388,7 @@ const CandidateRegistrationSystem = () => {
             <p className="text-xs text-gray-600 font-semibold mb-2">Demo Credentials:</p>
             <p className="text-xs text-gray-600">Tenant: <code className="bg-white px-2 py-1 rounded">vrksatech</code></p>
             <p className="text-xs text-gray-600">User: <code className="bg-white px-2 py-1 rounded">recruiters</code></p>
-            <p className="text-xs text-gray-600">Pass: <code className="bg-white px-2 py-1 rounded">vrksatech@123</code></p>
+            <p className="text-xs text-gray-600">Pass: <code className="bg-white px-2 py-1 rounded">Vrksatech@123</code></p>
           </div>
         </div>
       </div>
