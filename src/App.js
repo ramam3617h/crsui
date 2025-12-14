@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Bell, Users, FileText, CheckCircle, XCircle, AlertCircle, Plus, Search, Trash2, RefreshCw, LogOut, ShieldCheck, Activity, Eye, Lock, Download, Filter, Calendar, TrendingUp, Mail, Phone, Edit, Save, X } from 'lucide-react';
 
@@ -323,11 +324,11 @@ const CandidateRegistrationSystem = () => {
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-500 via-blue-600 to-purple-600 flex items-center justify-center p-4">
+      <div className="min-h-screen bg-gradient-to-br from-yellow-500 via-yellow-600 to-purple-600 flex items-center justify-center p-4">
         <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-blue-100 rounded-full mb-4">
-              <ShieldCheck className="w-12 h-12 text-blue-600" />
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-yellow-100 rounded-full mb-4">
+              <ShieldCheck className="w-12 h-12 text-yellow-600" />
             </div>
             <h1 className="text-3xl font-bold text-gray-900">Candidate Registration Interview System</h1>
             <p className="text-gray-600 mt-2">Multi Project Platform</p>
@@ -348,7 +349,7 @@ const CandidateRegistrationSystem = () => {
                 value={loginForm.tenantName}
                 onChange={(e) => setLoginForm({...loginForm, tenantName: e.target.value})}
                 placeholder="vrksatech"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
               />
             </div>
 
@@ -359,7 +360,7 @@ const CandidateRegistrationSystem = () => {
                 value={loginForm.username}
                 onChange={(e) => setLoginForm({...loginForm, username: e.target.value})}
                 placeholder="recruiters"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
               />
             </div>
 
@@ -370,14 +371,14 @@ const CandidateRegistrationSystem = () => {
                 value={loginForm.password}
                 onChange={(e) => setLoginForm({...loginForm, password: e.target.value})}
                 placeholder="••••••••"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500"
               />
             </div>
 
             <button
               onClick={handleLogin}
               disabled={loading}
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium disabled:opacity-50 flex items-center justify-center gap-2"
+              className="w-full bg-yellow-600 text-white py-3 rounded-lg hover:bg-yellow-700 transition-colors font-medium disabled:opacity-50 flex items-center justify-center gap-2"
             >
               {loading ? <RefreshCw className="w-5 h-5 animate-spin" /> : <Lock className="w-5 h-5" />}
               {loading ? 'Signing in...' : 'Sign In'}
@@ -385,10 +386,27 @@ const CandidateRegistrationSystem = () => {
           </div>
 
           <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-            <p className="text-xs text-gray-600 font-semibold mb-2">Demo Credentials:</p>
+            <p className="text-xs text-gray-600 font-semibold mb-2">Demo Credentials for candidate or unemployed registration: </p>
             <p className="text-xs text-gray-600">Tenant: <code className="bg-white px-2 py-1 rounded">vrksatech</code></p>
             <p className="text-xs text-gray-600">User: <code className="bg-white px-2 py-1 rounded">recruiters</code></p>
             <p className="text-xs text-gray-600">Pass: <code className="bg-white px-2 py-1 rounded">Vrksatech@123</code></p>
+          </div>
+         <div className="mt-3 text-center">
+          <p className="text-gray-600">
+            Terms and condition and Policy
+           <a href="https://www.vrksatechnology.com" target="_blank" rel="noopener noreferrer"> vrksatechnology.com </a>
+          {/*
+              <button
+              onClick={onSwitchToPolicyPages}
+              className="text-orange-600 font-semibold hover:underline"
+            >
+              PolicyPage
+            </button>
+                */}
+          </p>
+         </div>
+          <div className="border-t border-gray-800 mt-2 pt-1 text-center text-sm">
+            <p>&copy; 2025 VRKSA TECHNOLOGY LLP . All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -402,7 +420,7 @@ const CandidateRegistrationSystem = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-4">
               <h1 className="text-2xl font-bold text-gray-900">Candidate Registration and Interview System</h1>
-              <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+              <span className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">
                 {currentUser?.tenant_name}
               </span>
               <button
@@ -468,7 +486,7 @@ const CandidateRegistrationSystem = () => {
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                   activeTab === tab
-                    ? 'border-blue-600 text-blue-600'
+                    ? 'border-yellow-600 text-yellow-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700'
                 }`}
               >
@@ -483,7 +501,7 @@ const CandidateRegistrationSystem = () => {
                 }}
                 className={`py-4 px-1 border-b-2 font-medium text-sm transition-colors flex items-center gap-2 ${
                   activeTab === 'admin'
-                    ? 'border-blue-600 text-blue-600'
+                    ? 'border-yellow-600 text-yellow-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700'
                 }`}
               >
@@ -500,12 +518,12 @@ const CandidateRegistrationSystem = () => {
           <div>
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-xl font-semibold text-gray-900 flex items-center gap-2">
-                <TrendingUp className="w-6 h-6 text-blue-600" />
+                <TrendingUp className="w-6 h-6 text-yellow-600" />
                 Dashboard Overview
               </h2>
               <button
                 onClick={() => setShowRegisterForm(true)}
-                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                className="flex items-center gap-2 bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700"
               >
                 <Plus className="w-5 h-5" />
                 Register Candidate
@@ -514,7 +532,7 @@ const CandidateRegistrationSystem = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
               {[
-                { label: 'Total', value: stats.total, color: 'blue', icon: Users },
+                { label: 'Total', value: stats.total, color: 'yellow', icon: Users },
                 { label: 'Pending', value: stats.pending, color: 'yellow', icon: AlertCircle },
                 { label: 'Approved', value: stats.approved, color: 'green', icon: CheckCircle },
                 { label: 'Rejected', value: stats.rejected, color: 'red', icon: XCircle },
@@ -592,13 +610,13 @@ const CandidateRegistrationSystem = () => {
                     placeholder="Search..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <select
                   value={filterStatus}
                   onChange={(e) => setFilterStatus(e.target.value)}
-                  className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                 >
                   <option value="all">All Status</option>
                   <option value="pending">Pending</option>
@@ -674,7 +692,7 @@ const CandidateRegistrationSystem = () => {
                             <div className="flex gap-2">
                               <button
                                 onClick={() => handleViewHistory(c)}
-                                className="text-blue-600 hover:text-blue-800 text-xs"
+                                className="text-yellow-600 hover:text-yellow-800 text-xs"
                                 title="View History"
                               >
                                 <Activity className="w-4 h-4" />
@@ -751,7 +769,7 @@ const CandidateRegistrationSystem = () => {
                       }
                     }}
                     className={`p-4 border-b last:border-b-0 cursor-pointer hover:bg-gray-50 ${
-                      !n.is_read ? 'bg-blue-50' : ''
+                      !n.is_read ? 'bg-yellow-50' : ''
                     }`}
                   >
                     <div className="flex justify-between items-start">
@@ -759,7 +777,7 @@ const CandidateRegistrationSystem = () => {
                         <p className="text-sm text-gray-900">{n.message}</p>
                         <p className="text-xs text-gray-500 mt-1">{n.time}</p>
                       </div>
-                      {!n.is_read && <span className="w-2 h-2 bg-blue-600 rounded-full mt-2"></span>}
+                      {!n.is_read && <span className="w-2 h-2 bg-yellow-600 rounded-full mt-2"></span>}
                     </div>
                   </div>
                 ))
@@ -777,7 +795,7 @@ const CandidateRegistrationSystem = () => {
               </h2>
               <button
                 onClick={() => setShowUserForm(true)}
-                className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+                className="flex items-center gap-2 bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700"
               >
                 <Plus className="w-5 h-5" />
                 Add User
@@ -804,7 +822,7 @@ const CandidateRegistrationSystem = () => {
                       <td className="px-4 py-3 text-sm">
                         <span className={`px-2 py-1 rounded text-xs font-medium ${
                           u.role === 'admin' ? 'bg-purple-100 text-purple-800' :
-                          u.role === 'recruiter' ? 'bg-blue-100 text-blue-800' :
+                          u.role === 'recruiter' ? 'bg-yellow-100 text-yellow-800' :
                           'bg-gray-100 text-gray-800'
                         }`}>
                           {u.role}
@@ -852,7 +870,7 @@ const CandidateRegistrationSystem = () => {
                         <td className="px-4 py-3">
                           <span className={`px-2 py-1 rounded text-xs font-medium ${
                             log.action === 'CREATE' ? 'bg-green-100 text-green-800' :
-                            log.action === 'UPDATE' ? 'bg-blue-100 text-blue-800' :
+                            log.action === 'UPDATE' ? 'bg-yellow-100 text-yellow-800' :
                             log.action === 'DELETE' ? 'bg-red-100 text-red-800' :
                             'bg-gray-100 text-gray-800'
                           }`}>
@@ -890,7 +908,7 @@ const CandidateRegistrationSystem = () => {
                     type="text"
                     value={formData.name}
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                     placeholder="Ram Arcot"
                   />
                 </div>
@@ -900,7 +918,7 @@ const CandidateRegistrationSystem = () => {
                     type="email"
                     value={formData.email}
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                     placeholder="support@vrksatechnology.in"
                   />
                 </div>
@@ -910,7 +928,7 @@ const CandidateRegistrationSystem = () => {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => setFormData({...formData, phone: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                     placeholder="555-1234"
                   />
                 </div>
@@ -919,7 +937,7 @@ const CandidateRegistrationSystem = () => {
                   <select
                     value={formData.position}
                     onChange={(e) => setFormData({...formData, position: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   >
                     <option value="">Select position</option>
                     {positions.map(p => (
@@ -933,7 +951,7 @@ const CandidateRegistrationSystem = () => {
                     rows={3}
                     value={formData.resume}
                     onChange={(e) => setFormData({...formData, resume: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                     placeholder="Resume details..."
                   />
                 </div>
@@ -943,7 +961,7 @@ const CandidateRegistrationSystem = () => {
                     rows={3}
                     value={formData.coverLetter}
                     onChange={(e) => setFormData({...formData, coverLetter: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                     placeholder="Cover letter..."
                   />
                 </div>
@@ -952,7 +970,7 @@ const CandidateRegistrationSystem = () => {
                 <button
                   onClick={handleSubmitCandidate}
                   disabled={loading}
-                  className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="flex-1 bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {loading ? 'Registering...' : 'Register Candidate'}
@@ -986,7 +1004,7 @@ const CandidateRegistrationSystem = () => {
                     type="text"
                     value={editData.name}
                     onChange={(e) => setEditData({...editData, name: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -995,7 +1013,7 @@ const CandidateRegistrationSystem = () => {
                     type="email"
                     value={editData.email}
                     onChange={(e) => setEditData({...editData, email: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -1004,7 +1022,7 @@ const CandidateRegistrationSystem = () => {
                     type="tel"
                     value={editData.phone}
                     onChange={(e) => setEditData({...editData, phone: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -1012,7 +1030,7 @@ const CandidateRegistrationSystem = () => {
                   <select
                     value={editData.position}
                     onChange={(e) => setEditData({...editData, position: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   >
                     <option value="">Select position</option>
                     {positions.map(p => (
@@ -1026,7 +1044,7 @@ const CandidateRegistrationSystem = () => {
                     rows={3}
                     value={editData.resume}
                     onChange={(e) => setEditData({...editData, resume: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -1035,7 +1053,7 @@ const CandidateRegistrationSystem = () => {
                     rows={3}
                     value={editData.coverLetter}
                     onChange={(e) => setEditData({...editData, coverLetter: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
               </div>
@@ -1043,7 +1061,7 @@ const CandidateRegistrationSystem = () => {
                 <button
                   onClick={handleUpdateCandidate}
                   disabled={loading}
-                  className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50 flex items-center justify-center gap-2"
+                  className="flex-1 bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 disabled:opacity-50 flex items-center justify-center gap-2"
                 >
                   <Save className="w-4 h-4" />
                   {loading ? 'Updating...' : 'Update Candidate'}
@@ -1126,7 +1144,7 @@ const CandidateRegistrationSystem = () => {
                     type="text"
                     value={newUserForm.username}
                     onChange={(e) => setNewUserForm({...newUserForm, username: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -1135,7 +1153,7 @@ const CandidateRegistrationSystem = () => {
                     type="email"
                     value={newUserForm.email}
                     onChange={(e) => setNewUserForm({...newUserForm, email: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -1144,7 +1162,7 @@ const CandidateRegistrationSystem = () => {
                     type="password"
                     value={newUserForm.password}
                     onChange={(e) => setNewUserForm({...newUserForm, password: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -1153,7 +1171,7 @@ const CandidateRegistrationSystem = () => {
                     type="text"
                     value={newUserForm.fullName}
                     onChange={(e) => setNewUserForm({...newUserForm, fullName: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   />
                 </div>
                 <div>
@@ -1161,7 +1179,7 @@ const CandidateRegistrationSystem = () => {
                   <select
                     value={newUserForm.role}
                     onChange={(e) => setNewUserForm({...newUserForm, role: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500"
                   >
                     <option value="viewer">Viewer</option>
                     <option value="recruiter">Recruiter</option>
@@ -1173,7 +1191,7 @@ const CandidateRegistrationSystem = () => {
                 <button
                   onClick={handleCreateUser}
                   disabled={loading}
-                  className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 disabled:opacity-50"
+                  className="flex-1 bg-yellow-600 text-white px-4 py-2 rounded-lg hover:bg-yellow-700 disabled:opacity-50"
                 >
                   {loading ? 'Creating...' : 'Create User'}
                 </button>
